@@ -1,11 +1,8 @@
 import os
 import motor.motor_asyncio
 from bson.objectid import ObjectId
-from dotenv import load_dotenv
+from buko.config import MONGO_DETAILS
 
-load_dotenv()
-
-MONGO_DETAILS = os.environ.get("MONGO_DETAILS")
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 
 database = client.students

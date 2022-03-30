@@ -5,7 +5,7 @@ from buko.server.database import (
     retrieve_students,
     update_student,
 )
-from fastapi import APIRouter, Body
+from fastapi import APIRouter, Body, Depends
 from fastapi.encoders import jsonable_encoder
 from server.models.student import ErrorResponseModel, ResponseModel, StudenSchema
 
